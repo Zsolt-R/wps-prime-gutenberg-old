@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    # PAGE LAYOUT
+\*------------------------------------*/
+
+.site-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: var(--spacing-base);
+    max-width: var(--wrapper-size-default);
+    margin: 0 auto;
+}
+
+body:not(.page-template-full-width) .site-content {
+    padding-left: var(--spacing-base);
+    padding-right: var(--spacing-base);
+}
+
+.content-area,
+.main-sidebar {
+    grid-column: 1 / -1;
+}
+
+@include media-query(lap-and-up) {
+    .content-area {
+        grid-column: 1 / 10;
+    }
+
+    .main-sidebar {
+        grid-column: 10 / 13;
+    }
+}
+
+.page-template-full-width {
+    .site-content {
+        max-width: 100%;
+    }
+}
+
+.page-template-full-width,
+.page-template-no-sidebar {
+    .content-area {
+        grid-column: 1 / -1;
+    }
+}
+
+.wps-post-list {
+    display: grid;
+    grid-gap: var(--spacing-base);
+
+    @include media-query(lap-and-up) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

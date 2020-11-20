@@ -1,0 +1,10 @@
+// Wrappers
+:root {
+    --wrapper-outer-padding: 24px;
+    --wrapper-size-default: 1188px;
+    --wrapper-size-adjust: calc(var(--wrapper-size-default) + 40px);
+    --wrapper-size-slimmer: 600px;
+    --wrapper-size-slim: 800px;
+    --wrapper-size-wide: 1258px;
+    --wrapper-size-extra-wide: 1458px;
+}

@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+.site-footer {
+    --text-color-heading: var(--footer-heading-color);
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
+    
+
+    a {
+        color: var(--footer-link-color);
+&:hover {
+            color: var(--footer-link-color);
+        }
+    }
+}

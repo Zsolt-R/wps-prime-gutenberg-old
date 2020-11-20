@@ -1,0 +1,71 @@
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   .u-margin-top {}
+ *   .u-padding-left-large {}
+ *   .u-margin-right-small {}
+ *   .u-padding {}
+ *   .u-padding-right-none {}
+ *   .u-padding-horizontal {}
+ *   .u-padding-vertical-small {}
+ */
+
+/* stylelint-disable string-quotes */
+
+$inuit-spacing-directions: (null: null,
+  "-top": "-top",
+  "-right": "-right",
+  "-bottom": "-bottom",
+  "-left": "-left",
+  "-horizontal": "-left""-right",
+  "-vertical": "-top""-bottom"
+) !default;
+
+$inuit-spacing-properties: ("padding": "padding",
+  "margin": "margin"
+) !default;
+
+$inuit-spacing-sizes: (null: var(--spacing-base),
+  "-tiny": var(--spacing-tiny),
+  "-small": var(--spacing-small),
+  "-large": var(--spacing-large),
+  "-huge": var(--spacing-huge),
+  "-none": 0) !default;
+
+
+@each $property-namespace,
+$property in $inuit-spacing-properties {
+
+  @each $direction-namespace,
+  $direction-rules in $inuit-spacing-directions {
+
+    @each $size-namespace,
+    $size in $inuit-spacing-sizes {
+      .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
+        @each $direction in $direction-rules {
+          @if $size-namespace=='-large'or $size-namespace=='-huge' {
+            @include media-query(palm) {
+              #{$property}#{$direction}: var(--spacing-base) !important;
+            }
+
+            @include media-query(lap-and-up) {
+              #{$property}#{$direction}: $size !important;
+            }
+          }
+
+          @else {
+            #{$property}#{$direction}: $size !important;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+/* stylelint-enable string-quotes */

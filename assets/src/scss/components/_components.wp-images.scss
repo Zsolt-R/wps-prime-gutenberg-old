@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #COMPONENTS WP-IMAGES
+\*------------------------------------*/
+
+// WP generated image alignment classes
+.aligncenter {
+    margin: 0 auto;
+    clear: both;
+    display: block;
+}
+
+.alignleft {
+    float: left;
+    margin-right: var(--spacing-base); // add margin to images
+}
+
+.alignright {
+    float: right;
+    margin-left: var(--spacing-base); // add margin to images
+}
+
+.wp-caption {
+    font-size: var(--font-small);
+
+}
+
+.wp-caption-text {
+    padding: var(--spacing-small);
+}

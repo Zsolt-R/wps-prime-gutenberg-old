@@ -1,0 +1,71 @@
+.woocommerce-single-product-top-layout {
+    display: grid;
+    //grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: var(--spacing-base);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @include media-query(lap-and-up) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        //.woocommerce-product-gallery {
+        //    grid-column: col-start 1 / span 7;
+        //}
+        //
+        //.entry-summary {
+        //    grid-column: col-start 7 / span 13;
+        //}
+        //.woocommerce-product-gallery,
+        //.entry-summary {}
+
+        //grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .woocommerce-tabs {
+        grid-column: 1 / -1;
+    }
+}
+
+.woocommerce-single-product-bottom-layout {
+    display: grid;
+    grid-column-gap: var(--spacing-base);
+    grid-row-gap: var(--spacing-base);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @include media-query(lap-and-up) {
+        grid-row-gap: var(--spacing-large);
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        //grid-template-columns: repeat(12, [col-start] 1fr);
+
+        .wc-single-product-description {
+            grid-column: 1 / 7;
+        }
+
+        .wc-single-product-summary-wrapper-attributes {
+            grid-column: 7 / 13;
+        }
+
+        .wc-single-product-summary-wrapper-reviews {
+            grid-column: 1 / 13;
+        }
+
+        .upsells,
+        .related {
+            grid-column: 1 / 13;
+        }
+    }
+}
+
+.wc-single-product-summary-wrapper-reviews {
+    display: grid;
+    grid-gap: var(--spacing-small);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @include media-query(lap-and-up) {
+        grid-gap: var(--spacing-base);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        h2 {
+            grid-column: 1 / 3;
+        }
+    }
+}

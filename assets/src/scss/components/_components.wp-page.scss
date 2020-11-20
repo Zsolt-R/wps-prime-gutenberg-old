@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    #WP PAGE
+\*------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color-body);
+    color: var(--text-color-body);
+}
+
+.reset-space-top {
+    .site-content {
+        padding-top: 0;
+    }
+}
+
+.reset-space-bottom {
+    .site-content {
+        padding-bottom: 0;
+    }
+}
+
+.reset-space-vertical {
+    .site-content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.reset-space-vertical,
+.reset-space-bottom {
+    .entry-content {
+        margin-bottom: 0;
+    }
+}

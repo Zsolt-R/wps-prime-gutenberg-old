@@ -1,0 +1,27 @@
+.widget_rating_filter ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none outside;
+
+    li {
+        padding: 0 0 1px;
+        list-style: none;
+
+        a {
+            padding: 1px 0;
+            text-decoration: none;
+        }
+
+        .star-rating {
+            float: none;
+            display: inline-block;
+        }
+    }
+
+    li.chosen a::before {
+
+        @include iconbefore("\e013");
+        color: var(--woo-color-negative);
+    }
+}

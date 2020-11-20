@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    #WP PAGE HEADER
+\*------------------------------------*/
+
+.header-on-content .sticky-wrapper {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+}
+
+.site-header {
+    padding: var(--spacing-small) 0;
+    width: 100%;
+    transition: background-color 0.3s linear;
+    background-color: var(--header-background);
+    z-index: 999;
+    position: relative;
+
+}
+
+.masthead-layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+    max-width: var(--content-width);
+    padding-left: var(--spacing-base);
+    padding-right: var(--spacing-base);
+}
+
+.site-header__left {
+    grid-column: 1/4;
+}
+
+.site-header__right {
+    grid-column: 4/13;
+
+}
+
+
+.header-items-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.site-branding-logo {
+    --branding-logo-height: 70px;
+    display: block;
+}
+
+
+.site-branding-logo,
+.site-branding-logo svg {
+    max-height: var(--branding-logo-height);
+    width: auto;
+}
+
+.brand-logo {
+    @include media-query(palm) {
+        display: block;
+    }
+}
+
+.site-title,
+.site-description {
+    margin: 0;
+}
+
+.site-title {
+    font-size: 1.125em; // 18px
+    line-height: 1;
+}
+
+.header-items-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}

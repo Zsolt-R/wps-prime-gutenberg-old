@@ -1,0 +1,55 @@
+.cart_list,
+.product_list_widget {
+
+    padding: 0;
+    margin: 0;
+
+    li {
+        margin: 0;
+
+        a {
+            display: block;
+        }
+
+        img {
+            float: right;
+            margin-left: 4px;
+            width: 32px;
+            height: auto;
+            box-shadow: none;
+        }
+
+        dl {
+            margin: 0;
+            padding: 0;
+            border: none;
+
+            dt,
+            dd {
+                display: inline-block;
+                font-weight: normal;
+            }
+
+            dt {
+                clear: left;
+            }
+
+            dt {
+                margin: 0;
+            }
+
+            dd {
+                margin: 0;
+                padding-left: var(--spacing-tiny);
+
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .star-rating {
+            float: none;
+        }
+    }
+}

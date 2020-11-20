@@ -1,0 +1,141 @@
+/*------------------------------------*\
+    #TRUMPS TYPOGRAPHY
+\*------------------------------------*/
+
+//Font Weight
+.u-text-normal {
+    font-weight: var(--font-weight-normal);
+}
+
+.u-text-thinner {
+    font-weight: var(--font-weight-thinner);
+}
+
+.u-text-thin {
+    font-weight: var(--font-weight-thin);
+}
+
+.u-text-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.u-text-bolder {
+    font-weight: var(--font-weight-bolder);
+}
+
+.u-text-italic {
+    font-style: italic;
+}
+
+//Test Align
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+.u-text-left {
+    text-align: left;
+}
+
+//  Text Colors
+.u-text-color-invert {
+    color: var(--text-color-invert);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+        color: var(--text-color-invert);
+    }
+}
+
+//  Text Colors
+.u-text-color-text {
+    color: var(--text-color-body);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+        color: var(--text-color-body);
+    }
+}
+
+.u-text-color-light {
+    color: var(--text-color-light);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+        color: var(--text-color-light);
+    }
+}
+
+.u-text-color-primary {
+    color: var(--text-color-primary);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+        color: var(--text-color-primary);
+    }
+}
+
+.u-text-color-secondary {
+    color: var(--text-color-secondary);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+        color: var(--text-color-secondary);
+
+    }
+}
+
+.u-text-color-tertiary {
+    color: var(--text-color-tertiary);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+        color: var(--text-color-tertiary);
+    }
+}
+
+/* Text Sizes */
+.u-text-small {
+    font-size: var(--font-size-small);
+}
+
+.u-text-large {
+    font-size: var(--font-size-large);
+}
+
+.u-text-huge {
+    font-size: var(--font-size-huge);
+}

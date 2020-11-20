@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+.site-footer {
+    padding: var(--spacing-base) 0;
+
+}
+
+.widget-area-container {}
+
+.site-footer .widget-area-container {
+    --footer-widget-list-number: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--footer-widget-list-number), 1fr);
+    grid-gap: var(--spacing-base);
+    max-width: var(--wrapper-size-default);
+    padding: 0 var(--wrapper-outer-padding);
+    margin: 0 auto;
+
+    @include media-query(lap) {
+        --footer-widget-list-number: 2;
+    }
+
+    @include media-query(desktop) {
+        --footer-widget-list-number: 4;
+    }
+}

@@ -1,0 +1,21 @@
+.wps-prime-icon {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+
+.nav-links {
+    .nav-previous .wps-prime-icon {
+        margin-right: 0.5em;
+    }
+
+    .nav-next .wps-prime-icon {
+        margin-left: 0.5em;
+    }
+}
+
+.c-social-list__link .wps-prime-icon {
+    margin-right: 0.5em;
+}

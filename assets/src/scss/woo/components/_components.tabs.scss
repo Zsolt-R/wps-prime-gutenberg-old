@@ -1,0 +1,89 @@
+.woocommerce-tabs {
+    background-color: var(--woo-tabs-content-background);
+    margin-bottom: var(--spacing-base);
+
+    ul.tabs {
+        background-color: var(--background-color-body);
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+
+        @include media-query('lap-and-up') {
+            flex-direction: row;
+        }
+
+        li {
+            border-style: solid;
+            border-color: var(--color-gray-ui-dark);
+            border-width: 0px 1px 1px 1px;
+
+            @include media-query('lap-and-up') {
+                border-width: 1px 1px 1px 0px;
+            }
+
+            &:first-child {
+                border-top-width: 1px;
+
+                @include media-query('lap-and-up') {
+                    border-left-width: 1px;
+                }
+            }
+
+
+            a {
+                display: block;
+                padding: 0.5em 1em;
+                color: var(--text-color-body);
+                text-decoration: none;
+                position: relative;
+
+
+                &:after {
+                    opacity: 0;
+                    position: absolute;
+                    content: '';
+                    background: var(--woo-tabs-tab-hover-color);
+                    height: 5px;
+                    left: 0;
+                    right: 0;
+                    bottom: -5px;
+                    width: 100%;
+                    margin: 0 auto;
+                    transition: opacity var(--global-transition), transform var(--global-transition);
+                }
+
+
+                &:hover {
+                    text-decoration: none;
+
+                    &:after {
+                        opacity: 1;
+                        transform: translate(0, -5px);
+                    }
+
+                }
+            }
+
+            &.active {
+                a:after {
+                    opacity: 1;
+                    transform: translate(0, -5px);
+                }
+            }
+        }
+    }
+
+    .panel {
+        padding: var(--spacing-small);
+
+        @include media-query('lap-and-up') {
+            padding: var(--spacing-base);
+        }
+    }
+
+
+}

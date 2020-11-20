@@ -1,0 +1,64 @@
+/*
+*  Set utility color on sticky
+*/
+
+.is-sticky {
+    // --head-utility-color: var(--main-nav-sticky-text-color);
+}
+
+.head-utility {
+    display: none;
+
+    @include media-query(desktop) {
+        display: block;
+        margin-left: var(--spacing-small);
+    }
+
+
+    &.head-utility-has-social {
+        .head-utility-social {
+            &:before {
+                content: "|";
+                display: inline-block;
+                padding-right: var(--spacing-small);
+                color: var(--head-utility-color);
+
+            }
+        }
+    }
+
+    .head-utility__link {
+        color: var(--head-utility-color);
+        margin-left: var(--spacing-small);
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            text-decoration: none;
+            --head-utility-color: var(--head-utility-color-h);
+        }
+    }
+
+}
+
+.head-utility-social {
+    margin-left: var(--spacing-small);
+    display: inline-block;
+
+    .c-social-list {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .c-social-list__item {
+        display: inline;
+    }
+
+    .c-social-list__link {
+        transition: all 0.3s ease 0s;
+        color: var(--head-utility-color);
+
+        &:hover {
+            --head-utility-color: var(--head-utility-color-h);
+        }
+    }
+}

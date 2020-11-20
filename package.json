@@ -1,0 +1,52 @@
+{
+  "name": "wps-prime-g",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "webpack --mode development --watch true",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ZsoltR@bitbucket.org/ZsoltR/wps-prime-g.git"
+  },
+  "author": "Zsolt Revay",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ZsoltR/wps-prime-g#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cache-loader": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.6.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.3.0",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "mini-css-extract-plugin": "^0.8.2",
+    "minimatch": "^3.0.4",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-svgo": "^4.0.2",
+    "querystring": "^0.2.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass": "^1.26.8",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
+  },
+  "dependencies": {
+    "pepjs": "^0.5.2",
+    "shade-blend-color": "^1.0.0"
+  }
+}

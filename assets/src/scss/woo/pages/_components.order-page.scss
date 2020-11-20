@@ -1,0 +1,99 @@
+.woocommerce-columns--addresses {
+    .woocommerce-column__title {
+        font-weight: 800;
+        margin-bottom: var(--spacing-small);
+        font-size: var(--font-size-h3);
+    }
+
+    .woocommerce-column--1 {
+        margin-bottom: var(--spacing-base);
+    }
+
+}
+
+.woocommerce-order-overview {
+    margin: 0 0 var(--spacing-base);
+    list-style: none;
+    display: block;
+
+    li {
+        :first-child {
+            margin-left: 0;
+        }
+
+        display: inline-block;
+        margin: 0 var(--spacing-small) var(--spacing-base) 0;
+        padding-right: var(--spacing-base);
+        text-transform: uppercase;
+        font-size: 0.715em;
+        line-height: 1;
+        border-right: 1px dashed var(--color-gray-ui-dark);
+        list-style-type: none;
+
+        strong {
+            display: block;
+            font-size: 1.4em;
+            text-transform: none;
+            line-height: 1.5;
+        }
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+
+}
+
+.woocommerce-order-details {
+    .woocommerce-order-details__title {
+        font-weight: 800;
+        margin-bottom: var(--spacing-small);
+        font-size: var(--font-size-h3);
+    }
+}
+
+.wc-bacs-bank-details-account-name {
+    font-weight: bold;
+}
+
+.woocommerce-order-downloads,
+.woocommerce-customer-details,
+.woocommerce-order-details {
+    margin-bottom: var(--spacing-base);
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.woocommerce-customer-details {
+
+    address {
+        font-style: normal;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .woocommerce-customer-details--phone,
+    .woocommerce-customer-details--email {
+        margin-bottom: 0;
+        padding-left: 1.5em;
+    }
+
+    .woocommerce-customer-details--phone::before {
+
+        @include iconbefore("\e037");
+        margin-left: -1.5em;
+        line-height: 1.75;
+        position: absolute;
+    }
+
+    .woocommerce-customer-details--email::before {
+
+        @include iconbefore("\e02d");
+        margin-left: -1.5em;
+        line-height: 1.75;
+        position: absolute;
+    }
+}

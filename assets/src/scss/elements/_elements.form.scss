@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    #Generic Input Fields
+\*------------------------------------*/
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="password"],
+select,
+textarea {
+  margin-bottom: var(--form-fields-spacing);
+  border: var(--form-border-width) solid var(--color-gray-ui);
+  border-radius: var(--global-radius);
+  padding: var(--form-fields-padding);
+  line-height: calc(var(--global-line-height) - 2px); // input fields compensate border
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type=checkbox],
+input[type=radio] {
+  margin-right: 0.3em;
+  width: auto;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: 0;
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+::-webkit-input-placeholder,
+/* Chrome/Opera/Safari */
+::-moz-placeholder,
+/* Firefox 19+ */
+:-ms-input-placeholder,
+/* IE 10+ */
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--color-gray-ui-light);
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+  outline: none;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+::placeholder {
+  color: #888;
+}

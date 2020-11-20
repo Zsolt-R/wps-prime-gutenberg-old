@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    # PAGE CONTENT
+\*------------------------------------*/
+
+.hide-page-title {
+    .entry-title {
+        display: none;
+    }
+}
+
+.site-content {
+    padding: var(--spacing-large) 0;
+}
+
+.hentry {
+    margin-bottom: var(--spacing-unit-base);
+}
+
+.entry-content {
+    @include inuit-clearfix();
+    margin-bottom: var(--spacing-unit-small);
+}
+
+.entry-title>a {
+    color: var(--text-color-body);
+
+    &:hover {
+        text-decoration: none;
+        color: var(--text-color-primary);
+    }
+}
+
+.entry-header__entry-title {
+    font-size: var(--font-size-h1);
+}

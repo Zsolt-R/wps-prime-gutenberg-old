@@ -1,0 +1,60 @@
+//Font size definitions
+
+:root {
+  --global-font-size: 1em;
+  --global-line-height: 1.75;
+  --font-size-h1: clamp(27px, 2.5vw, 32px);
+  --font-size-h2: clamp(23px, 2.5vw, 26px);
+  --font-size-h3: clamp(20px, 2.5vw, 22px);
+  --font-size-h4: clamp(18px, 2.5vw, 20px);
+  --font-size-h5: clamp(16px, 2.5vw, 18px);
+  --font-size-h6: clamp(14px, 2.5vw, 16px);
+  --font-size-h1-line-height: 1.2;
+  --font-size-h2-line-height: 1.2;
+  --font-size-h3-line-height: 1.2;
+  --font-size-h4-line-height: 1.2;
+  --font-size-h5-line-height: 1.2;
+  --font-size-h6-line-height: 1.2;
+  --font-size-large: clamp(36px, 8vw, 62px);
+  --font-size-huge: clamp(42px, 8vw, 78px);
+  --font-size-inter: 0.9375rem; //15px 
+  --font-size-small: 0.875rem; //14px 
+}
+
+
+// Fallback for browsers that doesn't support clamp
+@supports not (font-size:clamp(27px, 2.5vw, 32px)) {
+  :root {
+    --font-size-h1: 27px;
+    --font-size-h2: 23px;
+    --font-size-h3: 20px;
+    --font-size-h4: 18px;
+    --font-size-h5: 16px;
+    --font-size-h6: 14px;
+    --font-size-large: 36px;
+    --font-size-huge: 42px;
+  }
+
+  @media screen and (min-width:64em) {
+    :root {
+      --font-size-h1: 32px;
+      --font-size-h2: 26px;
+      --font-size-h3: 22px;
+      --font-size-h4: 20px;
+      --font-size-h5: 18px;
+      --font-size-h6: 16px;
+      --font-size-large: 62px;
+      --font-size-huge: 78px;
+    }
+
+  }
+}
+
+// Font weights
+:root {
+  --font-weight-normal: 400;
+  --font-weight-thinner: 200;
+  --font-weight-thin: 300;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 900;
+}

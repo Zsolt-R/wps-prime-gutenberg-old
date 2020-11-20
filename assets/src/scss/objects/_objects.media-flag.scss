@@ -1,0 +1,126 @@
+   .o-flag,
+   .o-media {
+       --media-spacing: var(--spacing-base);
+
+       &--tiny {
+           --media-spacing: var(--spacing-tiny);
+       }
+   }
+
+   .o-flag,
+   .o-media {
+       &--small {
+           --media-spacing: var(--spacing-small);
+       }
+   }
+
+   .o-flag,
+   .o-media {
+       &--large {
+           --media-spacing: var(--spacing-base);
+
+           @include media-query('lap-and-up') {
+               --media-spacing: var(--spacing-large);
+           }
+       }
+   }
+
+   .o-flag,
+   .o-media {
+       &--huge {
+           --media-spacing: var(--spacing-base);
+
+           @include media-query('lap-and-up') {
+               --media-spacing: var(--spacing-huge);
+           }
+       }
+   }
+
+   // Not responsive has settings all the way.
+   .o-media.o-media--not-responsive,
+   .o-flag.o-flag--not-responsive {
+       display: flex;
+   }
+
+   .o-media.o-media--not-responsive .o-media__body,
+   .o-flag.o-flag--not-responsive .o-flag__body {
+       flex: min-content;
+       margin-left: var(--media-spacing);
+   }
+
+   .o-media,
+   .o-flag {
+       @include media-query('lap-and-up') {
+           display: flex;
+       }
+   }
+
+
+
+   .o-media__img,
+   .o-flag__img {
+       flex-shrink: 0;
+
+       @include media-query('palm') {
+           margin-bottom: var(--media-spacing);
+       }
+
+       >img {
+           display: block;
+       }
+   }
+
+   @include media-query('lap-and-up') {
+
+       .o-media__body,
+       .o-flag__body {
+
+           flex: min-content;
+           margin-left: var(--media-spacing);
+
+       }
+   }
+
+
+
+   .o-flag {
+       align-items: center;
+   }
+
+   .o-media--reverse,
+   .o-flag--reverse {
+       flex-direction: row-reverse;
+   }
+
+   @include media-query('lap-and-up') {
+
+       .o-media--reverse .o-media__body,
+       .o-flag--reverse .o-flag__body {
+           margin-left: 0;
+           margin-right: var(--media-spacing);
+       }
+   }
+
+
+   @include media-query('lap') {
+
+       .c-mediabox-image-large .o-media,
+       .c-mediabox-image-large .o-flag {
+           &__img {
+               flex: min-content;
+           }
+       }
+   }
+
+
+
+   .c-mediabox-has-full-height-image {
+       .attachment_image {
+           object-fit: cover;
+           height: 100%;
+       }
+   }
+
+   //.c-mediabox:not(.c-mediabox-image-small) .c-mediabox .attachment_image {
+   //    width: 100%;
+   //}

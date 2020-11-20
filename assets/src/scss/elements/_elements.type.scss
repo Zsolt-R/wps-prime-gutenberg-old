@@ -1,0 +1,138 @@
+/*------------------------------------*\
+    #BASE TYPE
+\*------------------------------------*/
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+button,
+input,
+optgroup,
+select,
+textarea,
+.u-font-body,
+.u-font-one {
+    font-family: var(--theme-font-one);
+    font-weight: var(--theme-font-one-weight, 400);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.u-font-heading,
+.u-font-two {
+    color: var(--text-color-heading);
+    font-family: var(--theme-font-two, var(--theme-font-one));
+    font-weight: var(--theme-font-two-weight, 600);
+}
+
+
+
+/**
+ * Emboldened elements.
+ */
+
+strong,
+b,
+dt {
+    font-weight: 900;
+}
+
+/**
+ * Code-like elements.
+ */
+code,
+kbd,
+samp {
+    color: var(--text-color-code);
+    font-family: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+pre {
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
+    padding: var(--spacing-small);
+    background-color: var(--background-color-pre);
+    border-radius: var(--global-radius);
+
+    &,
+    code,
+    kbd,
+    samp {
+        color: var(--text-color-invert);
+    }
+
+}
+
+/**
+ * Horizontal rules.
+ */
+hr {
+    border: none;
+    border-bottom: 1px solid var(--color-gray-ui);
+    margin-bottom: calc(var(--spacing-base) - 1px);
+}
+
+
+/*
+* Beak superlong text
+*/
+//p,a,td {
+//    @include contain-text();
+//}
+
+
+/**
+ * Highlighted text.
+ */
+mark {
+
+    pre & {
+        background: none;
+        border-bottom: 1px solid;
+        color: inherit;
+    }
+
+}
+
+/**
+* Blockquote
+*/
+blockquote {
+    font-style: italic;
+    position: relative;
+    padding: var(--spacing-base) calc(var(--spacing-base) * 1.5);
+
+    &:after,
+    &:before {
+        font-style: normal;
+        font-size: 2em;
+        line-height: 1;
+        content: '"';
+        color: var(--color-gray-ui);
+        position: absolute;
+        font-weight: 900;
+        display: inline-block;
+    }
+
+    &:before {
+        top: var(--spacing-small);
+        left: 0.3em;
+    }
+
+    &:after {
+        bottom: 0;
+        right: 0.3em;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}

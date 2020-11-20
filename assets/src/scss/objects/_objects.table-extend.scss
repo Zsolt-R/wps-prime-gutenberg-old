@@ -1,0 +1,46 @@
+/* ==========================================================================
+   #OBJECT TABLE
+   ========================================================================== */
+
+.o-table--striped {
+    tr:nth-child(even) {
+        background-color: var(--background-color-body);
+    }
+
+    tr:nth-child(odd) {
+        background: var(--color-gray-ui-light);
+    }
+}
+
+.o-table--rows {
+
+    &,
+    th,
+    td {
+        border: 0 solid var(--color-gray-ui);
+    }
+
+    border-top-width: 1px;
+
+    th,
+    td {
+        border-bottom-width: 1px;
+    }
+}
+
+.o-table--columns {
+
+    &,
+    th,
+    td {
+        border: 0 solid var(--color-gray-ui);
+    }
+
+    border-left-width: 1px;
+
+    th,
+    td {
+        border-right-width: 1px;
+    }
+
+}

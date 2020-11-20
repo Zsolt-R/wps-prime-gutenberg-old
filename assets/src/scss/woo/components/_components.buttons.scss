@@ -1,0 +1,109 @@
+a.button,
+button.button,
+input.button,
+#respond input#submit {
+    font-size: 100%;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    overflow: visible;
+    padding: var(--woo-button-spacing-default);
+
+    border-radius: var(--button-radius);
+    left: auto;
+    color: var(--text-color-invert);
+    background-color: var(--button-color-primary);
+    border: 0;
+    display: inline-block;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+
+    &.loading {
+        opacity: 0.25;
+        padding-right: 2.618em;
+
+        &::after {
+            font-family: "WooCommerce";
+            content: "\e01c";
+            vertical-align: top;
+            font-weight: 400;
+            position: absolute;
+            top: 0.618em;
+            right: 1em;
+            animation: spin 2s linear infinite;
+        }
+    }
+
+    &.added::after {
+        font-family: "WooCommerce";
+        content: "\e017";
+        margin-left: 0.53em;
+        vertical-align: bottom;
+    }
+
+    &:hover {
+        background-color: var(--button-color-primary-h);
+        text-decoration: none;
+        background-image: none;
+        color: var(--text-color-invert);
+    }
+
+    &.alt {
+        background-color: var(--button-color-secondary);
+        color: var(--button-text-color);
+        -webkit-font-smoothing: antialiased;
+
+        &:hover {
+            background-color: var(--button-color-secondary-h);
+            color: var(--button-text-color);
+        }
+
+        &.disabled,
+        &:disabled,
+        &:disabled[disabled],
+        &.disabled:hover,
+        &:disabled:hover,
+        &:disabled[disabled]:hover {
+            background-color: var(--button-color-secondary);
+            color: var(--button-text-color);
+        }
+    }
+
+    &:disabled,
+    &.disabled,
+    &:disabled[disabled] {
+        color: var(--button-text-color);
+        cursor: not-allowed;
+        opacity: 0.5;
+        padding: var(--woo-button-spacing-default);
+
+        &:hover {
+            color: inherit;
+            background-color: var(--button-color-primary);
+        }
+    }
+}
+
+.cart .button,
+.cart input.button {}
+
+input.button,
+#respond input#submit {
+    margin: 0;
+}
+
+a.added_to_cart {
+    padding-top: 0.5em;
+    display: inline-block;
+}
+
+.woocommerce-mini-cart__buttons {
+    .checkout {
+        background-color: var(--button-color-secondary);
+
+        &:hover {
+            background-color: var(--button-color-secondary-h);
+        }
+    }
+}

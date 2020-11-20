@@ -1,0 +1,20 @@
+.widget_product_categories {
+    ul {
+        list-style-type: none;
+
+    }
+
+    >ul {
+        margin-left: 0;
+    }
+
+    .children {
+        margin-left: var(--spacing-tiny);
+        padding-left: var(--spacing-small);
+        border-left: 1px solid var(--color-gray-ui);
+
+        .cat-item {}
+    }
+
+    .product-categories {}
+}

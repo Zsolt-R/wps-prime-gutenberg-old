@@ -1,0 +1,39 @@
+.woocommerce-cart-top-layout {
+    display: grid;
+    grid-gap: var(--spacing-base);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @include media-query(lap-and-up) {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+
+        .woocommerce-cart-form {
+            grid-column: 1 / 9;
+        }
+
+        .cart_totals {
+            grid-column: 9 / 13;
+        }
+    }
+
+}
+
+.checkout.woocommerce-checkout {
+    display: grid;
+    grid-gap: var(--spacing-base);
+    grid-template-columns: repeat(12, 1fr);
+
+    >* {
+        grid-column: 1/-1;
+    }
+
+    @include media-query(lap-and-up) {
+        .woocommerce-checkout-layout__left {
+            grid-column: 1/7;
+        }
+
+        .woocommerce-checkout-layout__right {
+            grid-column: 7/-1;
+        }
+
+    }
+}

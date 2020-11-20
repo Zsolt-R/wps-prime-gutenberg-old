@@ -1,0 +1,63 @@
+.wps-color-bubble-control {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.wps-color-bubble {
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2);
+    border: 1px solid transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+$backgroundColors: one,
+two,
+three,
+four,
+five,
+six,
+light,
+dark,
+body;
+
+$textColors: body,
+link,
+light,
+heading,
+primary,
+secondary,
+tertiary;
+
+$buttonColors: default,
+primary,
+secondary,
+tertiary,
+negative,
+positive,
+neutral,
+light,
+white;
+
+@each $color in $backgroundColors {
+    .background-color-#{$color} {
+        background-color:var(--background-color-#{$color});
+    }
+}
+
+@each $color in $textColors {
+    .text-color-#{$color} {
+        background-color:var(--text-color-#{$color});
+    }
+}
+
+@each $color in $buttonColors {
+    .button-color-#{$color} {
+        background-color:var(--button-color-#{$color});
+    }
+}

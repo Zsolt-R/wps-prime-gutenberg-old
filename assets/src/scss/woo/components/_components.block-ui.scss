@@ -1,0 +1,5 @@
+.blockUI.blockOverlay {
+    position: relative;
+
+    @include loader();
+}

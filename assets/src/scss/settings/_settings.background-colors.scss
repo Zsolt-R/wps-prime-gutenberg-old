@@ -1,0 +1,17 @@
+:root {
+    --background-color-one: #1e90ff;
+    --background-color-two: #ff6348;
+    --background-color-three: #ff4757;
+    --background-color-four: #ffa502;
+    --background-color-five: #2ed573;
+    --background-color-six: #eccc68;
+    --background-color-light: #f1f2f6;
+    --background-color-dark: #0C1516;
+    --background-color-body: #ffffff; // #2f3542;
+    --background-color-opacity-light: 0.7;
+    --background-color-opacity-dark: 0.7;
+    --background-color-opaq-light: rgba(255, 255, 255, var(--background-color-opacity-light));
+    --background-color-opaq-dark: rgba(000, 000, 000, var(--background-color-opacity-dark));
+    --background-color-pre: #444444;
+    --background-color-custom: #F5F5F5;
+}

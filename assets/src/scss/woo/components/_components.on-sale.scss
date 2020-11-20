@@ -1,0 +1,14 @@
+span.onsale {
+    padding: var(--spacing-small) var(--spacing-tiny);
+    font-weight: 700;
+    position: absolute;
+    text-align: center;
+    top: -0.5em;
+    left: -0.5em;
+    margin: 0;
+    border-radius: var(--global-radius);
+    background-color: var(--woo-color-on-sale-background);
+    color: var(--woo-color-on-sale-color);
+    font-size: 0.857em;
+    z-index: 9;
+}

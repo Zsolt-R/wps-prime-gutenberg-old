@@ -1,0 +1,92 @@
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info {
+    padding: var(--spacing-small) var(--spacing-base);
+    margin: 0 0 var(--spacing-base);
+    position: relative;
+    background-color: var(--woo-message-bar-background);
+    color: var(--woo-message-bar-color);
+    border-top: 3px solid var(--woo-color-primary);
+    list-style: none outside;
+    width: auto;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    @include media-query(palm) {
+        flex-wrap: wrap;
+    }
+
+
+    @include media-query(lap-and-up) {
+        &::before {
+            font-family: "WooCommerce";
+            content: "\e028";
+            display: inline-block;
+            margin-right: var(--spacing-small);
+        }
+    }
+
+    .button {
+        --woo-button-spacing-default: var(--spacing-tiny) var(--spacing-base);
+        order: 3;
+        margin-left: auto;
+    }
+
+    li {
+        list-style: none outside !important; // Required for default theme compatibility
+        padding-left: 0 !important; // Required for default theme compatibility
+        margin-left: 0 !important; // Required for default theme compatibility
+    }
+}
+
+.woocommerce-error {
+    flex-wrap: wrap;
+
+    li {
+        flex-basis: 100%;
+
+        @include media-query(lap-and-up) {
+            flex-basis: 40%;
+        }
+
+    }
+}
+
+.woocommerce-message {
+    border-top-color: var(--woo-message-bar-theme-default-color);
+
+    @include media-query(lap-and-up) {
+        &::before {
+            content: "\e015";
+            color: var(--woo-message-bar-theme-default-color);
+        }
+    }
+}
+
+.woocommerce-info {
+    border-top-color: var(--woo-message-bar-theme-info-color);
+
+    @include media-query(lap-and-up) {
+        &::before {
+            color: var(--woo-message-bar-theme-info-color);
+        }
+    }
+
+    .showcoupon {
+        margin-left: var(--spacing-small);
+    }
+}
+
+.woocommerce-error {
+    border-top-color: var(--woo-message-bar-theme-error-color);
+
+    @include media-query(lap-and-up) {
+        &::before {
+            content: "\e016";
+            color: var(--woo-message-bar-theme-error-color);
+        }
+    }
+}

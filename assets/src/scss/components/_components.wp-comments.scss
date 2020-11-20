@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #COMPONENTS COMMENT
+\*------------------------------------*/
+.comment-list {
+    margin-left: 0;
+
+}
+
+.comment-author.vcard {}
+
+.comment-respond {
+    border-top: 1px solid var(--color-gray-ui);
+    border-bottom: 1px solid var(--color-gray-ui);
+    padding: var(--spacing-small) 0;
+    margin-bottom: var(--spacing-base);
+
+}
+
+.form-submit {}
+
+.comment-form__label {}
+
+.comment-form__field {
+    display: block;
+    width: 100%;
+}
+
+.comment-reply-link {
+    font-size: var(--spacing-small);
+    line-height: 1;
+    font-weight: 600;
+}
+
+
+.bypostauthor {
+    border-left: 2px solid var(--color-gray-ui);
+    padding-left: var(--spacing-small);
+}

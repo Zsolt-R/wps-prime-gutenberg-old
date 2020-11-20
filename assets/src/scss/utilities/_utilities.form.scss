@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #Generic Input Fields
+\*------------------------------------*/
+
+.u-form-input-full {
+
+    input,
+    select,
+    textarea,
+        {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    input[type=submit],
+    input[type=checkbox],
+    input[type=radio] {
+        border: 0;
+        width: auto;
+    }
+}
+
+.u-form-required:before {
+    content: '*';
+    color: var(--text-color-negative);
+    font-weight: 900;
+    margin-left: -0.785em;
+}

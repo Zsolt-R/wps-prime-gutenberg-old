@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #COMPONENTS PAGE-MICRO
+\*------------------------------------*/
+
+.page-micro {
+    background-color: var(--footer-micro-background-color);
+    color: var(--footer-text-color);
+    padding: var(--spacing-small);
+}
+
+.page-micro__copy {
+    max-width: var(--wrapper-size-default);
+    font-size: var(--font-size-small);
+    display: block;
+}

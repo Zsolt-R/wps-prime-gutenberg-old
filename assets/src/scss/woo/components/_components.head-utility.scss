@@ -1,0 +1,102 @@
+.woo-head-utility-wrapper {
+    display: flex;
+    margin-left: var(--spacing-base);
+
+    @include media-query(palm) {
+        margin-right: var(--spacing-base);
+    }
+}
+
+.woo-head-utility {
+    position: relative;
+
+    .woo-head-utility__symbol {
+        position: relative;
+        color: var(--woo-head-utility-symbol-color);
+        font-size: var(--woo-head-utility-font-size);
+    }
+
+    .woo-head-utility__cart-count {
+        font-size: 13px;
+        position: absolute;
+        top: -0.3em;
+        right: -1em;
+        line-height: 1.1;
+        width: 1.1em;
+        height: 1.1em;
+        border-radius: 100%;
+        text-align: center;
+        background-color: var(--woo-head-cart-count-background);
+        color: var(--woo-head-cart-count-text-color);
+        box-sizing: content-box;
+        padding: 3px;
+    }
+}
+
+.site-header-user {
+    --header-user-width: 150px;
+    --header-user-position: calc(var(--header-user-width)/2 - 1rem);
+    position: relative;
+
+
+    &:hover {
+        cursor: pointer;
+
+        .site-header-user__list {
+            box-shadow: var(--nav-dropshadow);
+            left: calc(var(--header-user-position) * -1);
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+            animation-name: fadeInDownSmaller; // animation defined in main stylesheet
+        }
+    }
+}
+
+.site-header-user__list {
+    background-color: var(--woo-head-utility-background);
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    width: 15rem;
+    max-width: var(--header-user-width);
+    z-index: 999999;
+    left: -999em;
+    //left: calc(var(--header-user-position) * -1);
+    display: block;
+
+    a {
+        display: block;
+        padding: var(--spacing-tiny) var(--spacing-small);
+        color: var(--woo-head-utility-text-color);
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-bottom: 1px solid var(--woo-head-utility-background-h);
+            transition-timing-function: ease-in;
+            transition: var(--global-transition);
+            transform: translateX(-100%);
+        }
+
+
+        &:hover:before {
+            border-bottom: 1px solid var(--woo-head-utility-background-h);
+            transition-timing-function: ease-out;
+            transition: var(--global-transition);
+            transform: translateX(0);
+        }
+    }
+}
