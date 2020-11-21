@@ -1,1 +1,0 @@
-export {CustomColorSelect}  from './custom-color-select'
