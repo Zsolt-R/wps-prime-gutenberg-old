@@ -7,8 +7,8 @@
  */
 
  /* Register sidebar widget areas */
-add_action( 'widgets_init', 'child_register_theme_widgets' );
-function child_register_theme_widgets() {
+add_action( 'widgets_init', 'wps_register_theme_widgets' );
+function wps_register_theme_widgets() {
 	if ( class_exists( 'WooCommerce' ) ) {
 
 		register_sidebar(

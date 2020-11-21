@@ -16,7 +16,7 @@
 				?>
 				
 				<a href="<?php echo esc_url( get_permalink() ); ?>">
-				<?php the_post_thumbnail( 'wps_child_masonry_large', array( 'class' => 'entry-image' ) ); ?>
+				<?php the_post_thumbnail( 'wps_masonry_large', array( 'class' => 'entry-image' ) ); ?>
 				</a>
 			
 			<?php endif; ?>				
